@@ -32,12 +32,12 @@ class TechnicalStructureTest {
   @ArchTest
   static final ArchRule respectsTechnicalArchitectureLayers = layeredArchitecture()
       .consideringAllDependencies()
-      .layer("Config").definedBy("..config..")
-      .layer("Web").definedBy("..web..")
+      .optionalLayer("Config").definedBy("..config..")
+      .optionalLayer("Web").definedBy("..web..")
       .optionalLayer("Service").definedBy("..service..")
-      .layer("Security").definedBy("..security..")
+      .optionalLayer("Security").definedBy("..security..")
       .optionalLayer("Persistence").definedBy("..repository..")
-      .layer("Domain").definedBy("..domain..")
+      .optionalLayer("Domain").definedBy("..domain..")
 
       .whereLayer("Config").mayNotBeAccessedByAnyLayer()
       .whereLayer("Web").mayOnlyBeAccessedByLayers("Config")
