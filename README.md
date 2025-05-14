@@ -42,6 +42,7 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
 The application contains different test layers according to the [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html).
 
 The base of the pyramid is made up of unit tests. They should make up the biggest part of an automated test suite.
+To run JUnit tests:
 
 ```bash
 mvn clean test
@@ -49,11 +50,12 @@ mvn clean test
 
 The next layer, integration tests, test all places where your application serializes or deserializes data.
 Application Service's REST API, Repositories, or calling third-party services are good examples.
+Run this to enable integration tests, powered by testcontainers:
 
 ```bash
 mvn clean verify -P use-testcontainers
 ```
-The minimum percentage of code coverage required for the workflow to pass is **80** percent.
+The minimum percentage of code coverage required for the workflow to pass is **80**.
 
 <a name="license"></a>
 ## 📑 License
