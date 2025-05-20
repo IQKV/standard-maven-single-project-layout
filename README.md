@@ -57,7 +57,7 @@ Run this to enable integration tests, powered by testcontainers:
 ```bash
 mvn clean verify -P use-testcontainers
 ```
-The minimum percentage of code coverage required for the workflow to pass is **80**.
+The minimum percentage of code coverage required for the workflow to pass is **80 %**.
 
 <a name="license"></a>
 ## 📑 License
