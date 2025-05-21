@@ -61,11 +61,6 @@ The minimum percentage of code coverage required for the workflow to pass is **8
 
 --- 
 
-<a name="troubleshooting"></a>
-## 💥 Troubleshooting
-
-...
-
 <a name="changelog"></a>
 ## 📆 Release Notes
 
@@ -85,6 +80,11 @@ Please, follow [Contributing](.github/CONTRIBUTING.md) page.
 ## 📙 Code of Conduct
 
 Please, follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
+
+<a name="troubleshooting"></a>
+## 💥 Troubleshooting
+
+...
 
 <a name="license"></a>
 ## 📑 License
