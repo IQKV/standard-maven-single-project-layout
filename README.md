@@ -21,7 +21,7 @@ A service created for implementing the servicename API...
 
 ```bash
 # Clone the repository
-git clone https://github.com/expertness/standard-maven-project-layoutt.git my-service
+git clone https://github.com/expertness/standard-maven-project-layout.git my-service
 
 # Navigate to project directory
 cd my-service
@@ -41,9 +41,9 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
 
 The application contains different test layers according to the [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html).
 
-The base of the pyramid is made up of unit tests. They should make up the biggest part of an automated test suite.
+Unit tests are the base of the pyramid. They should make up the biggest part of an automated test suite.
 
-To run JUnit tests use:
+To run JUnit tests, use:
 
 ```bash
 mvn clean test
@@ -57,7 +57,7 @@ Run this to enable integration tests, powered by testcontainers:
 ```bash
 mvn clean verify -P use-testcontainers
 ```
-The minimum percentage of code coverage required for the workflow to pass is **80 %**.
+The minimum percentage of code coverage required for the workflow to pass is **80%**.
 
 --- 
 
