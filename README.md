@@ -59,6 +59,33 @@ mvn clean verify -P use-testcontainers
 ```
 The minimum percentage of code coverage required for the workflow to pass is **80 %**.
 
+--- 
+
+<a name="troubleshooting"></a>
+## 💥 Troubleshooting
+
+...
+
+<a name="changelog"></a>
+## 📆 Release Notes
+
+Can be found in [CHANGELOG](CHANGELOG.md).
+
+<a name="acknowledgments"></a>
+## 👍 Acknowledgments
+
+...
+
+<a name="contributing"></a>
+## 🙏 Contributing
+
+Please, follow [Contributing](.github/CONTRIBUTING.md) page.
+
+<a name="codeofconduct"></a>
+## 📙 Code of Conduct
+
+Please, follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
+
 <a name="license"></a>
 ## 📑 License
 
