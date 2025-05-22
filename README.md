@@ -64,7 +64,7 @@ The minimum percentage of code coverage required for the workflow to pass is **8
 <a name="changelog"></a>
 ## 📆 Changelog
 
-Can be found in [CHANGELOG](CHANGELOG.md).
+Conventional changelog located [here](CHANGELOG.md).
 
 <a name="acknowledgments"></a>
 ## 👍 Acknowledgments
