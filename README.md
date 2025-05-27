@@ -25,7 +25,7 @@ A service created for implementing the servicename API...
 
 ```bash
 # Clone the repository
-git clone https://github.com/expertness/standard-maven-project-layout.git my-service
+git clone https://github.com/expertness/standard-maven-single-project-layout.git my-service
 
 # Navigate to project directory
 cd my-service
