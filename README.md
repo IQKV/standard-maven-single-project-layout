@@ -53,6 +53,12 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
 
 ```
 
+### ⚙️ Environment Variables
+
+| Variable             | Description               | Default |
+| -------------------- | ------------------------- | ------- |
+| `LOGGING_LEVEL_ROOT` | Set default logging level | `INFO`  |
+
 ### 🔺 Tests
 
 The application contains different test layers according to the [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html).
