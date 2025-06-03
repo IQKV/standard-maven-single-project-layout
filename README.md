@@ -1,6 +1,6 @@
 > ## 🤔 What is this template all about?
 >
-> - This template can be used as a base layer for a single-module Maven projects.
+> - This template can be used as a base layer for a single-module Maven project.
 > - Make project easy to maintain with **7 issue templates**.
 > - Quick start documentation with an extraordinary README structure.
 > - Manage issues with **20 issue labels**.
