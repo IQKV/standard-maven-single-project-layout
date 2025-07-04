@@ -30,7 +30,7 @@ A service created for implementing the servicename API...
 >
 > #### Install Prerequisites:
 >
-> - [Node LTS version](https://nodejs.org/en/blog/release/v22.15.0/), [Git](https://git-scm.com/), [Docker](https://www.docker.com/get-started/), [Docker Compose](https://docs.docker.com/compose/)
+> - [Node LTS version](https://nodejs.org/en/blog/release/v22.15.0/), [pnpm](https://pnpm.io/installation), [Git](https://git-scm.com/), [Docker](https://www.docker.com/get-started/), [Docker Compose](https://docs.docker.com/compose/)
 > - [OpenJDK LTS](https://aws.amazon.com/corretto/), [Maven](https://maven.apache.org/install.html)
 
 ### 🔺 Local development
@@ -43,7 +43,7 @@ git clone https://github.com/IQKV/standard-maven-single-project-layout.git my-se
 cd my-service
 
 # Install git hooks
-npm install
+pnpm install
 
 # Start local dev services dependencies
 docker compose -f compose.yaml up -d
