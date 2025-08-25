@@ -119,3 +119,65 @@ Please, follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
 ## 📑 License
 
 This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for more details.
+
+
+---
+
+## Project Tooling Overview
+
+### 🔧 Build & Runtime
+- **Java**: OpenJDK 21 LTS
+- **Maven**: Build automation with Spring Boot parent POM
+- **Spring Boot**: Web framework with modulith architecture
+- **Docker**: Containerization with Docker Compose for local services
+
+### 📦 Package Management
+- **pnpm**: Node.js package manager (v22.15.0+ required)
+- **Maven Wrapper**: `mvnw` for consistent Maven execution
+
+### 🎯 Code Quality & Formatting
+- **Prettier**: Code formatting with Java plugin support
+- **Stylelint**: CSS/SCSS linting
+- **Checkstyle**: Java code style enforcement
+- **JaCoCo**: Code coverage (90% minimum requirement)
+- **ArchUnit**: Architecture testing
+- **Qulice**: Optional comprehensive quality checks
+
+### 🚀 Scripts (package.json)
+- `lint`: Run stylelint checks
+- `prettier:check/write`: Format validation/application
+- `prepare`: Install Husky git hooks
+- `release`: Automated releases with conventional changelog
+- `node_modules:clear`: Clean Node dependencies
+
+### ⚙️ Git Workflow & Automation
+- **Husky**: Git hooks management
+- **lint-staged**: Pre-commit linting
+- **Commitizen**: Conventional commit messages
+- **Commitlint**: Commit message validation
+- **Dependabot**: Automated dependency updates
+
+### 🔍 GitHub Workflows
+- **Build validation**: Node.js project builds
+- **Commit message checks**: Conventional commit enforcement
+- **PR title validation**: Standardized pull request titles
+- **Template setup**: Repository initialization automation
+
+### 🧪 Testing Strategy
+- **Unit Tests**: JUnit-based (`mvn clean test`)
+- **Integration Tests**: Testcontainers support (`mvn clean verify -P use-testcontainers`)
+- **Architecture Tests**: Spring Modulith validation
+- **Test Coverage**: 90% minimum threshold
+
+### 📋 Project Templates & Documentation
+- **7 Issue Templates**: Structured issue reporting
+- **20 Issue Labels**: Comprehensive labeling system
+- **Community Files**: Contributing guidelines, Code of Conduct, Security policy
+- **Conventional Changelog**: Automated release notes
+
+### 🌟 Development Profiles
+- **default**: Standard development
+- **dev**: With Spring Boot DevTools
+- **production**: Optimized for deployment
+- **use-qulice**: Enhanced quality checks
+- **use-testcontainers**: Integration testing
