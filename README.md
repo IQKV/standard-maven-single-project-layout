@@ -35,7 +35,7 @@ A service created for implementing the servicename API...
 
 ### 🔺 Local development
 
-```bash
+```shell script
 # Clone the repository
 git clone https://github.com/dimdnk/standard-maven-single-project-layout.git my-service
 
@@ -67,7 +67,7 @@ Unit tests are the base of the pyramid. They should make up the biggest part of 
 
 To run JUnit tests, use:
 
-```bash
+```shell script
 mvn clean test
 ```
 
@@ -76,7 +76,7 @@ Application Service's REST API, Repositories, or calling third-party services ar
 
 Run this to enable integration tests, powered by testcontainers:
 
-```bash
+```shell script
 mvn clean verify -P use-testcontainers
 ```
 
@@ -100,13 +100,13 @@ Conventional changelog located [here](CHANGELOG.md).
 
 ## 🙏 Community & Contributions
 
-Please, follow [Contributing](.github/CONTRIBUTING.md) page.
+Please follow [Contributing](.github/CONTRIBUTING.md) page.
 
 <a name="codeofconduct"></a>
 
 ## 📙 Code of Conduct
 
-Please, follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
+Please follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
 
 <a name="troubleshooting"></a>
 
@@ -122,7 +122,7 @@ This project is licensed under the Apache License. See the [LICENSE](LICENSE) fi
 
 ---
 
-## Project Tooling Overview
+## _GitHub Project Tooling Overview_
 
 ### 🔧 Build & Runtime
 
