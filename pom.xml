@@ -26,7 +26,7 @@
         <spring-boot.run.jvmArguments>-Duser.timezone=UTC</spring-boot.run.jvmArguments>
         <checkstyle.skip>false</checkstyle.skip>
         <maven.gitcommitid.skip>false</maven.gitcommitid.skip>
-        <start-class>com.iqkv.servicename.ServicenameApplication</start-class>
+        <start-class>com.github.dimdnk.servicename.ServicenameApplication</start-class>
     </properties>
     <dependencies>
         <dependency>
