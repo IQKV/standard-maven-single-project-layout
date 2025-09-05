@@ -144,6 +144,14 @@ This project is licensed under the Apache License. See the [LICENSE](LICENSE) fi
 - **JaCoCo**: Code coverage (90% minimum requirement)
 - **ArchUnit**: Architecture testing
 - **Qulice**: Optional comprehensive quality checks
+- **Cursor Rules**: Predefined code quality rules for Java development covering:
+  - Maven best practices
+  - Object-oriented design
+  - Spring framework
+  - Security guidelines
+  - Performance optimization
+  - Functional programming
+  - Testing standards
 
 ### 🚀 Scripts (package.json)
 
