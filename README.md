@@ -18,6 +18,23 @@ A GitHub template for quickly bootstrapping Spring Boot applications with best p
 
 This template provides a standardized foundation for developing Java applications using Spring Boot with Maven's single-module layout. For detailed documentation, please refer to the [docs](./docs) directory.
 
+## Template Customization
+
+To use this template for your own project:
+
+1. Click the **[Use this template](https://github.com/dimdnk/standard-maven-single-project-layout/generate)** button at the top of the repository
+2. Name your repository and provide a description
+3. Choose the repository visibility (public or private)
+4. Click **Create repository from template**
+
+After creating your repository:
+
+1. Update the project name and description in `pom.xml`
+2. Modify the package names in `src/main/java` and `src/test/java`
+3. Update this README.md with your project-specific information
+4. Review and adjust GitHub workflows in `.github/workflows` as needed
+5. Customize environment variables in `compose.yaml` for your application
+
 ## Quick Links
 
 - [Project Overview](./template-docs/01-project-overview.md)
