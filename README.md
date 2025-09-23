@@ -16,7 +16,7 @@ A GitHub template for quickly bootstrapping Spring Boot applications with best p
 
 ## Overview
 
-This template provides a standardized foundation for developing Java applications using Spring Boot with Maven's single-module layout. For detailed documentation, please refer to the [docs](./docs) directory.
+This template provides a standardized foundation for developing Java applications using Spring Boot with Maven's single-module layout. For detailed documentation, please refer to the [template-docs](./template-docs) directory.
 
 ## Template Customization
 
@@ -76,7 +76,7 @@ docker compose up -d
 mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
 ```
 
-For more detailed instructions, configuration options, and development guidelines, please refer to the [documentation](./template-docs).
+For more detailed instructions, configuration options, and development guidelines, please refer to the [documentation](./template-docs/).
 
 ## License
 
