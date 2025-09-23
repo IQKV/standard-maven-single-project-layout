@@ -1,41 +1,36 @@
-> ## 🤔 What is this template all about?
->
-> - This template can be used as a base layer for a single-module Maven project.
-> - Make the project easy to maintain with **7 issue templates**.
-> - Quick-start documentation with an extraordinary README structure.
-> - Manage issues with **20 issue labels**.
-> - Make _community healthier_ with all the guides like code of conduct, contributing, support, security...
-> - Learn more with the [official GitHub guide on creating repositories from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
-> - To start using it, click **[Use this template](https://github.com/dimdnk/standard-maven-single-project-layout/generate)** to create your new repository.
+# Spring Boot Application Template
 
----
+A GitHub template for quickly bootstrapping Spring Boot applications with best practices.
 
-# 🚀 Servicename Backend
+## Overview
 
-<a name="description"></a>
+This template provides a standardized foundation for developing Java applications using Spring Boot with Maven's single-module layout. For detailed documentation, please refer to the [docs](./docs) directory.
 
-## 📜 Description
+## Quick Links
 
-A service created for implementing the servicename API...
+- [Project Overview](./docs/01-project-overview.md)
+- [Getting Started Guide](./docs/02-getting-started.md)
+- [Architecture Overview](./docs/03-architecture-overview.md)
+- [Development Workflow](./docs/04-development-workflow.md)
+- [Testing Guide](./docs/05-testing-guide.md)
 
-> ##### 🛠️ Technology stack
->
-> Java 21, Maven, Spring Boot
+## Key Features
 
-<a name="instructions"></a>
+- **Project Structure**: Standard Maven single-module layout
+- **GitHub Integration**: Issue templates, labels, and workflows
+- **Quality Tools**: Code formatting, linting, and testing setup
+- **Documentation**: Community guidelines and contribution process
 
-## 📒 Instructions
+## Prerequisites
 
-> [!TIP]
->
-> #### Install Prerequisites:
->
-> - [Node LTS version](https://nodejs.org/en/blog/release/v22.15.0/), [pnpm](https://pnpm.io/installation), [Git](https://git-scm.com/), [Docker](https://www.docker.com/get-started/), [Docker Compose](https://docs.docker.com/compose/)
-> - [OpenJDK LTS](https://aws.amazon.com/corretto/), [Maven](https://maven.apache.org/install.html)
+- Java 21 (OpenJDK)
+- Maven
+- Node.js & pnpm
+- Docker & Docker Compose
 
-### 🔺 Local development
+## Quick Start
 
-```shell script
+```bash
 # Clone the repository
 git clone https://github.com/dimdnk/standard-maven-single-project-layout.git my-service
 
@@ -45,155 +40,19 @@ cd my-service
 # Install git hooks
 pnpm install
 
-# Start local dev services dependencies
-docker compose -f compose.yaml up -d
+# Start local dev services
+docker compose up -d
 
-#  Run the application in dev mode
+# Run the application
 mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
-
 ```
 
-### ⚙️ Environment Variables
+For more detailed instructions, configuration options, and development guidelines, please refer to the [documentation](./docs).
 
-| Variable             | Description               | Default |
-| -------------------- | ------------------------- | ------- |
-| `LOGGING_LEVEL_ROOT` | Set default logging level | `INFO`  |
+## License
 
-### 🔺 Tests
+This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for details.
 
-The application contains different test layers according to the [Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html).
+## Contributing
 
-Unit tests are the base of the pyramid. They should make up the biggest part of an automated test suite.
-
-To run JUnit tests, use:
-
-```shell script
-mvn clean test
-```
-
-The next layer, integration tests, test all places where your application serializes or deserializes data.
-Application Service's REST API, Repositories, or calling third-party services are good examples.
-
-Run this to enable integration tests, powered by testcontainers:
-
-```shell script
-mvn clean verify -P use-testcontainers
-```
-
-The minimum percentage of code coverage required for the workflow to pass is **80%**.
-
----
-
-<a name="changelog"></a>
-
-## 📆 Changelog
-
-Conventional changelog located [here](CHANGELOG.md).
-
-<a name="acknowledgments"></a>
-
-## 👍 Acknowledgments
-
-...
-
-<a name="contributing"></a>
-
-## 🙏 Community & Contributions
-
-Please follow [Contributing](.github/CONTRIBUTING.md) page.
-
-<a name="codeofconduct"></a>
-
-## 📙 Code of Conduct
-
-Please follow [Code of Conduct](.github/CODE_OF_CONDUCT.md) page.
-
-<a name="troubleshooting"></a>
-
-## 💥 Troubleshooting
-
-...
-
-<a name="license"></a>
-
-## 📑 License
-
-This project is licensed under the Apache License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-## _GitHub Project Tooling Overview_
-
-### 🔧 Build & Runtime
-
-- **Java**: OpenJDK 21 LTS
-- **Maven**: Build automation with Spring Boot parent POM
-- **Spring Boot**: Web framework with modulith architecture
-- **Docker**: Containerization with Docker Compose for local services
-
-### 📦 Package Management
-
-- **pnpm**: Node.js package manager (v22.15.0+ required)
-- **Maven Wrapper**: `mvnw` for consistent Maven execution
-
-### 🎯 Code Quality & Formatting
-
-- **Prettier**: Code formatting with Java plugin support
-- **Stylelint**: CSS/SCSS linting
-- **Checkstyle**: Java code style enforcement
-- **JaCoCo**: Code coverage (90% minimum requirement)
-- **ArchUnit**: Architecture testing
-- **Qulice**: Optional comprehensive quality checks
-- **Cursor Rules**: Predefined code quality rules for Java development covering:
-  - Maven best practices
-  - Object-oriented design
-  - Spring framework
-  - Security guidelines
-  - Performance optimization
-  - Functional programming
-  - Testing standards
-
-### 🚀 Scripts (package.json)
-
-- `lint`: Run stylelint checks
-- `prettier:check/write`: Format validation/application
-- `prepare`: Install Husky git hooks
-- `release`: Automated releases with conventional changelog
-- `node_modules:clear`: Clean Node dependencies
-
-### ⚙️ Git Workflow & Automation
-
-- **Husky**: Git hooks management
-- **lint-staged**: Pre-commit linting
-- **Commitizen**: Conventional commit messages
-- **Commitlint**: Commit message validation
-- **Dependabot**: Automated dependency updates
-
-### 🔍 GitHub Workflows
-
-- **Build validation**: Node.js project builds
-- **Commit message checks**: Conventional commit enforcement
-- **PR title validation**: Standardized pull request titles
-- **Template setup**: Repository initialization automation
-
-### 🧪 Testing Strategy
-
-- **Unit Tests**: JUnit-based (`mvn clean test`)
-- **Integration Tests**: Testcontainers support (`mvn clean verify -P use-testcontainers`)
-- **Architecture Tests**: Spring Modulith validation
-- **Test Coverage**: 90% minimum threshold
-
-### 📋 Project Templates & Documentation
-
-- **7 Issue Templates**: Structured issue reporting
-- **20 Issue Labels**: Comprehensive labeling system
-- **Community Files**: Contributing guidelines, Code of Conduct, Security policy
-- **Conventional Changelog**: Automated release notes
-
-### 🌟 Development Profiles
-
-- **default**: Standard development
-- **dev**: With Spring Boot DevTools
-- **production**: Optimized for deployment
-- **use-qulice**: Enhanced quality checks
-- **use-testcontainers**: Integration testing
+Please read our [Contributing Guidelines](.github/CONTRIBUTING.md) and [Code of Conduct](.github/CODE_OF_CONDUCT.md).
