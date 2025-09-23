@@ -19,11 +19,13 @@
      ```
 
 2. **Install Git hooks**
+
    ```bash
    pnpm install
    ```
 
 3. **Start local development services**
+
    ```bash
    docker compose up -d
    ```

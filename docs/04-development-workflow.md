@@ -23,6 +23,7 @@ This project uses a conventional Git workflow with automated quality checks:
 ## Development Cycle
 
 1. **Setup Environment**
+
    ```bash
    pnpm install
    docker compose up -d
@@ -33,6 +34,7 @@ This project uses a conventional Git workflow with automated quality checks:
    - Add tests for new functionality
 
 3. **Local Testing**
+
    ```bash
    mvn clean test
    mvn clean verify -P use-testcontainers  # For integration tests
@@ -49,6 +51,7 @@ This project uses a conventional Git workflow with automated quality checks:
 ## Continuous Integration
 
 GitHub Actions workflows automatically:
+
 - Build the project
 - Run tests
 - Check code quality

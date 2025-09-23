@@ -17,6 +17,7 @@ mvn clean test
 ```
 
 Unit tests should:
+
 - Be fast and independent
 - Mock external dependencies
 - Focus on a single component
@@ -28,6 +29,7 @@ mvn clean verify -P use-testcontainers
 ```
 
 Integration tests use:
+
 - Testcontainers for database and service dependencies
 - Spring Boot Test for application context
 - REST Assured for API testing
@@ -60,6 +62,7 @@ Integration tests use:
 ## Continuous Integration
 
 Tests automatically run on:
+
 - Pull requests
 - Pushes to main branch
 - Release preparation
