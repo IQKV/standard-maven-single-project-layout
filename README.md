@@ -20,11 +20,11 @@ This template provides a standardized foundation for developing Java application
 
 ## Quick Links
 
-- [Project Overview](./docs/01-project-overview.md)
-- [Getting Started Guide](./docs/02-getting-started.md)
-- [Architecture Overview](./docs/03-architecture-overview.md)
-- [Development Workflow](./docs/04-development-workflow.md)
-- [Testing Guide](./docs/05-testing-guide.md)
+- [Project Overview](./template-docs/01-project-overview.md)
+- [Getting Started Guide](./template-docs/02-getting-started.md)
+- [Architecture Overview](./template-docs/03-architecture-overview.md)
+- [Development Workflow](./template-docs/04-development-workflow.md)
+- [Testing Guide](./template-docs/05-testing-guide.md)
 
 ## Key Features
 
@@ -59,7 +59,7 @@ docker compose up -d
 mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
 ```
 
-For more detailed instructions, configuration options, and development guidelines, please refer to the [documentation](./docs).
+For more detailed instructions, configuration options, and development guidelines, please refer to the [documentation](./template-docs).
 
 ## License
 
