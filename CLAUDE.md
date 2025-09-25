@@ -8,7 +8,7 @@ This document outlines modern Spring Boot 3 best practices for enterprise-grade 
 
 ### Multi-Module Maven Structure
 ```
-multimoduleservice/
+servicename/
 ├── pom.xml (parent aggregator)
 ├── shared/                    # Common utilities, DTOs, interfaces
 ├── domain/                    # Domain models, business logic
