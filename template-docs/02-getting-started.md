@@ -14,7 +14,7 @@
    - Click the "Use this template" button on GitHub
    - Or clone the repository directly:
      ```bash
-     git clone https://github.com/dimdnk/standard-maven-single-project-layout.git my-project
+     git clone https://github.com/IQKV/standard-maven-single-project-layout.git my-project
      cd my-project
      ```
 
