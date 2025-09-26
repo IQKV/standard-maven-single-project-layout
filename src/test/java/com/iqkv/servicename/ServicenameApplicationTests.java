@@ -14,8 +14,16 @@
  * limitations under the License.
  */
 
-/**
- * Application root.
- */
+package com.iqkv.servicename;
 
-package com.github.dimdnk.servicename;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class ServicenameApplicationTests {
+
+  @Test
+  void contextLoads() {
+  }
+
+}

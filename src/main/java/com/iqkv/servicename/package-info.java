@@ -14,19 +14,8 @@
  * limitations under the License.
  */
 
-package com.github.dimdnk.servicename;
+/**
+ * Application root.
+ */
 
-import java.util.TimeZone;
-
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-@SpringBootApplication
-public class ServicenameApplication {
-
-  public static void main(String[] args) {
-    TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
-    SpringApplication.run(ServicenameApplication.class, args);
-  }
-
-}
+package com.iqkv.servicename;
