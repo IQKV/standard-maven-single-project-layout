@@ -5,14 +5,12 @@
 This project uses a conventional Git workflow with automated quality checks:
 
 1. **Branching Strategy**
-
    - `main`: Production-ready code
    - `feature/*`: New features
    - `bugfix/*`: Bug fixes
    - `release/*`: Release preparation
 
 2. **Commit Convention**
-
    - Uses [Conventional Commits](https://www.conventionalcommits.org/)
    - Format: `type(scope): message`
    - Examples: `feat(api): add user endpoint`, `fix(auth): correct token validation`
@@ -32,7 +30,6 @@ This project uses a conventional Git workflow with automated quality checks:
    ```
 
 2. **Implement Changes**
-
    - Write code following project conventions
    - Add tests for new functionality
 
@@ -44,7 +41,6 @@ This project uses a conventional Git workflow with automated quality checks:
    ```
 
 4. **Code Quality**
-
    - Ensure code passes Checkstyle rules
    - Maintain test coverage (minimum 80%)
 

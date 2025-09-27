@@ -11,7 +11,6 @@
 ## Quick Start
 
 1. **Create a new repository from this template**
-
    - Click the "Use this template" button on GitHub
    - Or clone the repository directly:
      ```bash
@@ -39,14 +38,12 @@
 ## Project Configuration
 
 1. **Update project information in pom.xml**
-
    - Group ID
    - Artifact ID
    - Version
    - Description
 
 2. **Configure application properties**
-
    - Edit `src/main/resources/application.properties` or `application.yml`
 
 3. **Customize Docker Compose services**
