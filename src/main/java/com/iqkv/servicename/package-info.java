@@ -15,7 +15,7 @@
  */
 
 /**
- * Application root.
+ * Application root package for the Servicename modulith. This package serves as the root for all application modules.
  */
-
+@org.springframework.modulith.ApplicationModule
 package com.iqkv.servicename;

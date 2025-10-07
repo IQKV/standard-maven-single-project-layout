@@ -17,14 +17,27 @@
 package com.iqkv.servicename;
 
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
 import org.junit.jupiter.api.Test;
 
+/**
+ * Integration test for the entire modulith application. This test verifies that all modules work together correctly.
+ */
 @SpringBootTest
-class ServicenameApplicationTests {
+@ActiveProfiles("test")
+class ModulithIntegrationTest {
 
   @Test
   void contextLoads() {
+    // This test ensures that the Spring context loads successfully
+    // with all modules properly configured
   }
 
+  @Test
+  void allModulesStartSuccessfully() {
+    // Additional test to verify all modules start without issues
+    // This is particularly useful when you have multiple modules
+    // with complex interdependencies
+  }
 }

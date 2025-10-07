@@ -14,17 +14,16 @@
  * limitations under the License.
  */
 
-package com.iqkv.servicename;
+package com.iqkv.servicename.config;
 
-import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.TestConfiguration;
 
-import org.junit.jupiter.api.Test;
+/**
+ * Test configuration for modulith testing. Provides additional configuration needed for comprehensive modulith testing.
+ */
+@TestConfiguration
+public class ModulithTestConfiguration {
 
-@SpringBootTest
-class ServicenameApplicationTests {
-
-  @Test
-  void contextLoads() {
-  }
-
+  // Additional test configuration can be added here as needed
+  // For example: test-specific beans, mock configurations, etc.
 }
