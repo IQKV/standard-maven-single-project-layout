@@ -2,7 +2,8 @@
 
 ## Introduction
 
-This Spring Boot template provides a standardized foundation for developing Java applications using Spring Boot. It follows Maven's standard single-project layout and includes a comprehensive set of tools and configurations to streamline development.
+This Spring Boot template provides a standardized foundation for developing Java applications using Spring Boot. It follows Maven's standard single-project layout and includes a
+comprehensive set of tools and configurations to streamline development.
 
 ## Key Features
 

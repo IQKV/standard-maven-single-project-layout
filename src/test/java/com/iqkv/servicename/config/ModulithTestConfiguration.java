@@ -23,7 +23,6 @@ import org.springframework.boot.test.context.TestConfiguration;
  */
 @TestConfiguration
 public class ModulithTestConfiguration {
-
   // Additional test configuration can be added here as needed
-  // For example: test-specific beans, mock configurations, etc.
+  // For example, test-specific beans, mock configurations, etc.
 }

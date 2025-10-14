@@ -16,9 +16,8 @@
 
 package com.iqkv.servicename;
 
-import org.springframework.modulith.test.ApplicationModuleTest;
-
 import org.junit.jupiter.api.Test;
+import org.springframework.modulith.test.ApplicationModuleTest;
 
 /**
  * Scenario-based modulith tests for testing cross-module interactions. These tests verify that modules communicate correctly through events and APIs.

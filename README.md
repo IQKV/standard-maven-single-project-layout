@@ -5,7 +5,10 @@
 > - Quick-start documentation
 > - Manage issues with **20 issue labels**.
 > - Make _community healthier_ with all the guides like code of conduct, contributing, support, security...
-> - Learn more with the [official GitHub guide on creating repositories from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
+> - Learn more with
+
+    the [official GitHub guide on creating repositories from a template](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template).
+
 > - To start using it, click **[Use this template](https://github.com/IQKV/standard-maven-single-project-layout/generate)** to create your new repository.
 
 ---
@@ -16,7 +19,8 @@ A GitHub template for quickly bootstrapping Spring Boot applications with best p
 
 ## Overview
 
-This template provides a standardized foundation for developing Java applications using Spring Boot with Maven's single-module layout. For detailed documentation, please refer to the [template-docs](./template-docs) directory.
+This template provides a standardized foundation for developing Java applications using Spring Boot with Maven's single-module layout. For detailed documentation, please refer to
+the [template-docs](./template-docs) directory.
 
 ## Template Customization
 

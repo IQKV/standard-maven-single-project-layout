@@ -16,10 +16,10 @@
 
 package com.iqkv.servicename;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 
-import org.junit.jupiter.api.Test;
 
 /**
  * Integration test for the entire modulith application. This test verifies that all modules work together correctly.

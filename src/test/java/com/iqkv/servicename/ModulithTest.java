@@ -16,10 +16,9 @@
 
 package com.iqkv.servicename;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.modulith.core.ApplicationModules;
 import org.springframework.modulith.docs.Documenter;
-
-import org.junit.jupiter.api.Test;
 
 /**
  * Modulith tests for verifying module structure and boundaries. This test ensures that the application follows proper modular architecture principles.
@@ -37,16 +36,12 @@ class ModulithTest {
   @Test
   void createModuleDocumentation() throws Exception {
     // Generate module documentation
-    new Documenter(modules)
-        .writeDocumentation()
-        .writeIndividualModulesAsPlantUml();
+    new Documenter(modules).writeDocumentation().writeIndividualModulesAsPlantUml();
   }
 
   @Test
   void writeModulithDocumentation() throws Exception {
     // Generate comprehensive modulith documentation
-    new Documenter(modules)
-        .writeModulesAsPlantUml()
-        .writeIndividualModulesAsPlantUml();
+    new Documenter(modules).writeModulesAsPlantUml().writeIndividualModulesAsPlantUml();
   }
 }

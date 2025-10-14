@@ -18,10 +18,9 @@ package com.iqkv.servicename.util;
 
 import java.util.stream.Stream;
 
+import com.iqkv.servicename.ServicenameApplication;
 import org.springframework.modulith.core.ApplicationModule;
 import org.springframework.modulith.core.ApplicationModules;
-
-import com.iqkv.servicename.ServicenameApplication;
 
 /**
  * Utility class for modulith testing operations. Provides common functionality needed across modulith tests.
@@ -50,8 +49,7 @@ public final class ModulithTestUtils {
    * @return the application module
    */
   public static ApplicationModule getModule(String moduleName) {
-    return MODULES.getModuleByName(moduleName)
-        .orElseThrow(() -> new IllegalArgumentException("Module not found: " + moduleName));
+    return MODULES.getModuleByName(moduleName).orElseThrow(() -> new IllegalArgumentException("Module not found: " + moduleName));
   }
 
   /**
