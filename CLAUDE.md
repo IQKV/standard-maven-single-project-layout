@@ -301,7 +301,7 @@ public class ProductController {
                 product.getId(), product.getName());
                 
             return ResponseEntity.ok(new ProductResponse(product));
-        } catch (Exception ex) {
+        } catch (final Exception ex) {
             log.error("Error fetching product: productId={}, error={}", 
                 id, ex.getMessage(), ex);
             throw ex;
@@ -516,14 +516,14 @@ public class DatabaseHealthIndicator implements HealthIndicator {
     
     @Override
     public Health health() {
-        try (var connection = dataSource.getConnection()) {
+        try (final var connection = dataSource.getConnection()) {
             if (connection.isValid(1)) {
                 return Health.up()
                     .withDetail("database", "PostgreSQL")
                     .withDetail("connection", "Available")
                     .build();
             }
-        } catch (SQLException ex) {
+        } catch (final SQLException ex) {
             return Health.down()
                 .withDetail("database", "PostgreSQL")
                 .withDetail("error", ex.getMessage())
