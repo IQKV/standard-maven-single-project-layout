@@ -66,7 +66,9 @@ Add a detailed introduction about the project here, everything you want the read
 
 ## 🧩 Boilerplate Architecture
 
-- **Project Structure**: Standard Maven single-module layout
+- **Project Structure**: Tactical DDD with bounded contexts, hexagonal architecture (domain/application/adapter layers)
 - **GitHub Integration**: Issue templates, labels, and workflows
 - **Quality Tools**: Code formatting, linting, and testing setup
 - **Documentation**: Community guidelines and contribution process
+
+> See [AGENTS.md](AGENTS.md) for detailed project structure and DDD patterns.
