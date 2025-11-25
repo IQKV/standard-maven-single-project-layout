@@ -6,7 +6,7 @@ This document provides comprehensive guidelines for repository management, devel
 
 ## 🏛️ Repository Structure & Organization
 
-### Standard Maven Project Layout
+### Tactical DDD Project Layout
 
 ```
 project-root/
@@ -16,13 +16,33 @@ project-root/
 │   ├── main/
 │   │   ├── java/                     # Java source code
 │   │   │   └── com/example/project/
-│   │   │       ├── config/           # Spring configuration classes
-│   │   │       ├── domain/           # Domain entities and business logic
-│   │   │       ├── repository/       # Data access layer
-│   │   │       ├── service/          # Business service layer
-│   │   │       ├── controller/       # REST controllers and DTOs
-│   │   │       ├── security/         # Security configuration
-│   │   │       ├── exception/        # Custom exceptions and handlers
+│   │   │       ├── shared/           # Shared kernel (cross-cutting concerns)
+│   │   │       │   ├── domain/       # Shared domain primitives
+│   │   │       │   ├── exception/    # Common exceptions
+│   │   │       │   └── util/         # Utility classes
+│   │   │       ├── infrastructure/   # Infrastructure layer
+│   │   │       │   ├── config/       # Spring configuration
+│   │   │       │   ├── security/     # Security implementation
+│   │   │       │   ├── persistence/  # JPA repositories, adapters
+│   │   │       │   └── messaging/    # Event publishers, message brokers
+│   │   │       ├── [bounded-context-1]/  # Example: user
+│   │   │       │   ├── domain/       # Domain layer (core business logic)
+│   │   │       │   │   ├── model/    # Aggregates, entities, value objects
+│   │   │       │   │   ├── service/  # Domain services
+│   │   │       │   │   └── event/    # Domain events
+│   │   │       │   ├── application/  # Application layer
+│   │   │       │   │   ├── service/  # Application services (use cases)
+│   │   │       │   │   ├── dto/      # Data transfer objects
+│   │   │       │   │   └── port/     # Ports (interfaces for adapters)
+│   │   │       │   └── adapter/      # Adapters (interface layer)
+│   │   │       │       ├── in/       # Inbound adapters
+│   │   │       │       │   └── rest/ # REST controllers
+│   │   │       │       └── out/      # Outbound adapters
+│   │   │       │           └── persistence/ # Repository implementations
+│   │   │       ├── [bounded-context-2]/  # Example: order
+│   │   │       │   ├── domain/
+│   │   │       │   ├── application/
+│   │   │       │   └── adapter/
 │   │   │       └── Application.java  # Spring Boot main class
 │   │   └── resources/
 │   │       ├── application.yml       # Base configuration
@@ -30,11 +50,26 @@ project-root/
 │   │       └── db/changelog/         # Database migrations (if using Liquibase)
 │   └── test/
 │       └── java/                     # Unit, integration, and architecture tests
+│           └── com/example/project/
+│               ├── [bounded-context]/
+│               │   ├── domain/       # Domain model tests
+│               │   ├── application/  # Application service tests
+│               │   └── adapter/      # Adapter tests
+│               └── architecture/     # ArchUnit tests
 ├── .gitignore
 ├── pom.xml                           # Maven build configuration
 ├── README.md
 └── AGENTS.md                         # This file
 ```
+
+**Key DDD Concepts:**
+
+- **Bounded Context**: Logical boundary for a specific domain model (e.g., user, order, payment)
+- **Domain Layer**: Core business logic, entities, value objects, aggregates, domain services
+- **Application Layer**: Use cases, orchestration, DTOs, ports (interfaces)
+- **Adapter Layer**: Implementation of ports (REST controllers, repository implementations)
+- **Infrastructure**: Technical concerns (config, security, persistence framework)
+- **Shared Kernel**: Common code shared across bounded contexts
 
 ## 🤖 AI Agent Guidelines
 
