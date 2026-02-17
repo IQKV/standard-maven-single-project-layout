@@ -30,11 +30,6 @@
         <start-class>com.iqkv.servicename.ServicenameApplication</start-class>
     </properties>
     <dependencies>
-        <dependency>
-            <groupId>com.iqkv</groupId>
-            <artifactId>boot-starter-mvc-rest</artifactId>
-        </dependency>
-
 
         <dependency>
             <groupId>net.logstash.logback</groupId>
