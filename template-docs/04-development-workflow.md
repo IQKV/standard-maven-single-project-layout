@@ -16,7 +16,7 @@ This project uses a conventional Git workflow with automated quality checks:
     - Examples: `feat(api): add user endpoint`, `fix(auth): correct token validation`
 
 3. **Pre-commit Hooks**
-    - Code formatting with Prettier
+    - Code formatting with oxfmt
     - Linting with Stylelint
     - Commit message validation
 
