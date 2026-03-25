@@ -4,21 +4,22 @@ This directory contains documentation for the Spring Boot application template.
 
 ## Contents
 
-1. [Project Overview](01-project-overview.md) - Introduction and key features
-2. [Getting Started Guide](02-getting-started.md) - Setup and initial configuration
-3. [Architecture Overview](03-architecture-overview.md) - System design and components
-4. [Development Workflow](04-development-workflow.md) - Day-to-day development practices
-5. [Testing Guide](05-testing-guide.md) - Testing strategies and practices
+| #   | File                                                       | Description                                                               |
+| --- | ---------------------------------------------------------- | ------------------------------------------------------------------------- |
+| 1   | [01-project-overview.md](01-project-overview.md)           | Template purpose, full technology stack, Maven profiles, and key features |
+| 2   | [02-getting-started.md](02-getting-started.md)             | Prerequisites, quick-start steps, and project customization checklist     |
+| 3   | [03-architecture-overview.md](03-architecture-overview.md) | Layered architecture, Spring Modulith, actuator build info, extensibility |
+| 4   | [04-development-workflow.md](04-development-workflow.md)   | Git workflow, pre-commit hooks, CI workflows, and release process         |
+| 5   | [05-testing-guide.md](05-testing-guide.md)                 | Test categories, JaCoCo thresholds, ArchUnit rules, Modulith tests        |
 
 ## Purpose
 
-This documentation is designed to help developers:
+These docs help developers:
 
-- Understand the template structure and features
-- Set up their development environment quickly
-- Follow best practices for Spring Boot development
-- Maintain consistent code quality and standards
+- Understand what the template includes and why
+- Get a service running locally in minutes
+- Follow consistent coding, testing, and release conventions
 
 ## Contributing
 
-If you'd like to improve this documentation, please follow the [Contributing Guidelines](../.github/CONTRIBUTING.md).
+To improve this documentation, follow the [Contributing Guidelines](../.github/CONTRIBUTING.md).

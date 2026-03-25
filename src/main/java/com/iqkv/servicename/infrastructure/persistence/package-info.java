@@ -14,15 +14,8 @@
  * limitations under the License.
  */
 
-package com.iqkv.servicename.config;
-
-import org.springframework.boot.test.context.TestConfiguration;
-
 /**
- * Test configuration for modulith testing. Provides additional configuration needed for comprehensive modulith testing.
+ * JPA / Spring Data infrastructure configuration (datasource, transaction manager, Liquibase/Flyway setup).
+ * Bounded-context-specific repository implementations belong in their own {@code adapter.out.persistence} packages.
  */
-@TestConfiguration
-public class ModulithTestConfiguration {
-  // Additional test configuration can be added here as needed
-  // For example, test-specific beans, mock configurations, etc.
-}
+package com.iqkv.servicename.infrastructure.persistence;

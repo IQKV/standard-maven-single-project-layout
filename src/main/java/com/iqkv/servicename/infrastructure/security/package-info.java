@@ -14,15 +14,8 @@
  * limitations under the License.
  */
 
-package com.iqkv.servicename.config;
-
-import org.springframework.boot.test.context.TestConfiguration;
-
 /**
- * Test configuration for modulith testing. Provides additional configuration needed for comprehensive modulith testing.
+ * Spring Security filter chains, JWT filters, and security utility classes.
+ * Must not depend on bounded-context adapter or application packages.
  */
-@TestConfiguration
-public class ModulithTestConfiguration {
-  // Additional test configuration can be added here as needed
-  // For example, test-specific beans, mock configurations, etc.
-}
+package com.iqkv.servicename.infrastructure.security;

@@ -14,15 +14,8 @@
  * limitations under the License.
  */
 
-package com.iqkv.servicename.config;
-
-import org.springframework.boot.test.context.TestConfiguration;
-
 /**
- * Test configuration for modulith testing. Provides additional configuration needed for comprehensive modulith testing.
+ * Utility classes shared across all bounded contexts (e.g. date helpers, string utilities).
+ * Classes in this package must not depend on any bounded-context or infrastructure packages.
  */
-@TestConfiguration
-public class ModulithTestConfiguration {
-  // Additional test configuration can be added here as needed
-  // For example, test-specific beans, mock configurations, etc.
-}
+package com.iqkv.servicename.shared.util;

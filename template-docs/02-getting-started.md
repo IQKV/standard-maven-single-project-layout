@@ -2,62 +2,90 @@
 
 ## Prerequisites
 
-- Java 21 (OpenJDK)
-- Maven
-- Node.js & pnpm
-- Docker & Docker Compose
-- Git
+| Tool             | Minimum Version | Notes                               |
+| ---------------- | --------------- | ----------------------------------- |
+| Java (OpenJDK)   | 21              | LTS — required                      |
+| Maven            | 3.9+            | or use the bundled `./mvnw` wrapper |
+| Node.js          | 22.15.0         | required for Git hooks toolchain    |
+| pnpm             | 10.32.1         | install via `npm i -g pnpm`         |
+| Docker + Compose | any recent      | for running SonarQube locally       |
+| Git              | any recent      |                                     |
 
 ## Quick Start
 
-1. **Create a new repository from this template**
-    - Click the "Use this template" button on GitHub
-    - Or clone the repository directly:
-        ```bash
-        git clone https://github.com/IQKV/standard-maven-single-project-layout.git my-project
-        cd my-project
-        ```
+### 1. Create a new repository from this template
 
-2. **Install Git hooks**
+Click **[Use this template](https://github.com/IQKV/standard-maven-single-project-layout/generate)** on GitHub, or clone directly:
 
-    ```bash
-    pnpm install
-    ```
+```bash
+git clone https://github.com/IQKV/standard-maven-single-project-layout.git my-service
+cd my-service
+```
 
-3. **Start local development services**
+### 2. Install Git hooks
 
-    ```bash
-    docker compose up -d
-    ```
+```bash
+pnpm install
+```
 
-4. **Run the application**
-    ```bash
-    mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
-    ```
+This installs Husky, Commitlint, oxfmt, Stylelint, lint-staged, and release-it via `pnpm`.
 
-## Project Configuration
+### 3. Start local development services
 
-1. **Update project information in pom.xml**
-    - Group ID
-    - Artifact ID
-    - Version
-    - Description
+```bash
+docker compose up -d
+```
 
-2. **Configure application properties**
-    - Edit `src/main/resources/application.properties` or `application.yml`
+Starts a local **SonarQube 25.3 Community** instance at [http://localhost:9001](http://localhost:9001) (no forced authentication by default).
 
-3. **Customize Docker Compose services**
-    - Edit `compose.yaml` to match your development needs
+### 4. Run the application
+
+```bash
+./mvnw spring-boot:run -Dspring-boot.run.profiles=local -P dev
+```
+
+The `dev` Maven profile adds `spring-boot-devtools`. The JVM timezone is forced to UTC by default.
+
+## Project Customization Checklist
+
+After creating your repository from the template:
+
+- [ ] Update `groupId`, `artifactId`, `name`, `description` in `pom.xml`
+- [ ] Update `<start-class>` property in `pom.xml` to match your new package
+- [ ] Rename the Java package from `com.iqkv.servicename` to your own (`com.example.myservice`)
+- [ ] Update `spring.application.name` in `src/main/resources/application.yml`
+- [ ] Update `name` in `package.json` (`@iqkv/servicename` → `@yourorg/myservice`)
+- [ ] Rename `compose.yaml` service name from `dev-servicename` to your service name
+- [ ] Replace this `README.md` with `README.template.md` (the `use-template.yml` workflow does this automatically when the template is used on GitHub)
 
 ## Development Profiles
 
-- **default**: Standard development
-- **dev**: Includes Spring Boot DevTools
-- **production**: Optimized for deployment
-- **use-testcontainers**: Integration testing with testcontainers
+| Maven Profile   | Spring Profile | Purpose                                    |
+| --------------- | -------------- | ------------------------------------------ |
+| `default`       | —              | Standard build, active by default          |
+| `dev`           | `dev`          | Adds `spring-boot-devtools` for hot reload |
+| `production`    | —              | Placeholder for production config          |
+| `modulith-test` | —              | Runs Modulith-specific tests only          |
+| `use-qulice`    | —              | Enables Qulice static analysis             |
+
+## Running Tests
+
+```bash
+# Unit + architecture tests (fast)
+./mvnw clean test -Dcheckstyle.skip=true
+
+# Modulith verification tests
+./mvnw test -P modulith-test -Dcheckstyle.skip=true
+
+# Full verify (includes JaCoCo 90% coverage gate)
+./mvnw clean verify -Dcheckstyle.skip=true
+
+# Checkstyle only
+./mvnw checkstyle:check
+```
 
 ## Next Steps
 
-- Review the [Development Workflow](04-development-workflow.md)
-- Check the [Testing Guide](05-testing-guide.md)
-- Explore the [Architecture Overview](03-architecture-overview.md)
+- Review the [Architecture Overview](03-architecture-overview.md)
+- Check the [Development Workflow](04-development-workflow.md)
+- Read the [Testing Guide](05-testing-guide.md)
