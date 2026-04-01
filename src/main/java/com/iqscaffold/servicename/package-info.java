@@ -15,7 +15,6 @@
  */
 
 /**
- * Application root package for the Servicename modulith. This package serves as the root for all application modules.
+ * Application root package for the Servicename service.
  */
-@org.springframework.modulith.ApplicationModule
 package com.iqscaffold.servicename;

@@ -7,12 +7,6 @@
 spring:
   application:
     name: servicename
-  modulith:
-    events:
-      externalization:
-        enabled: false
-      republish-outstanding-events-on-restart: true
-    republish-outstanding-events-on-restart: true
 
 git:
   build_time: "@git.build.time@"
