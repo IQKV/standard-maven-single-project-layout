@@ -1,0 +1,48 @@
+services:
+  # Servicename - Local Development
+  servicename:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: builder
+    image: iqscaffold/servicename:dev
+    container_name: servicename-dev
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_APPLICATION_NAME: servicename
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    networks:
+      - servicename-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8081/actuator/health/readiness"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 90s
+    restart: unless-stopped
+    volumes:
+      - servicename_logs:/app/logs
+      - servicename_tmp:/app/tmp
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 768M
+        reservations:
+          cpus: "0.25"
+          memory: 384M
+
+networks:
+  servicename-network:
+    driver: bridge
+    name: servicename-network-dev
+
+volumes:
+  servicename_logs:
+    name: servicename_logs_dev
+    driver: local
+  servicename_tmp:
+    name: servicename_tmp_dev
+    driver: local
