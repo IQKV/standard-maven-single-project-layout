@@ -1,9 +1,10 @@
-# Multi-stage build with optimized caching
+# Multi-stage build for Servicename with optimized caching
 FROM eclipse-temurin:21-jdk-alpine AS builder
 
 # Install Maven for build optimization
 RUN apk add --no-cache maven
 
+# Set working directory
 WORKDIR /app
 
 # Copy Maven configuration for dependency caching
@@ -24,6 +25,7 @@ RUN mvn clean package -DskipTests -B && \
 # Production runtime stage with security hardening
 FROM eclipse-temurin:21-jre-alpine
 
+# Security: Install only essential packages
 RUN apk add --no-cache curl tzdata && \
     rm -rf /var/cache/apk/* && \
     addgroup -g 1001 -S appuser && \
