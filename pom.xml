@@ -16,11 +16,9 @@
 
     </developers>
     <properties>
-        <java.version>21</java.version>
+        <java.version>25</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
         <spring-boot.run.jvmArguments>-Duser.timezone=UTC</spring-boot.run.jvmArguments>
         <checkstyle.skip>true</checkstyle.skip>
         <maven.gitcommitid.skip>false</maven.gitcommitid.skip>
@@ -97,9 +95,6 @@
                     <plugin>
                         <groupId>com.qulice</groupId>
                         <artifactId>qulice-maven-plugin</artifactId>
-                        <configuration>
-                            <license>file:${basedir}/LICENSE</license>
-                        </configuration>
                     </plugin>
                 </plugins>
             </build>
@@ -121,8 +116,7 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>${maven-compiler-plugin.version}</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <release>${java.version}</release>
                     <parameters>true</parameters>
                 </configuration>
             </plugin>
