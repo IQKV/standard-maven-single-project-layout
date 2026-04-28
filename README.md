@@ -74,7 +74,7 @@ pnpm install
 docker compose up -d
 
 # Run the application
-mvn spring-boot:run -Dspring-boot.run.profiles=local -P dev
+mvn spring-boot:run -Dspring-boot.run.profiles=local -P local
 ```
 
 For more detailed instructions, configuration options, and development guidelines, please refer to the [documentation](./template-docs/).
