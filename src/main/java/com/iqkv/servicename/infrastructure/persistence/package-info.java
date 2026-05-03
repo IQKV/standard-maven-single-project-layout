@@ -15,7 +15,7 @@
  */
 
 /**
- * Messaging infrastructure: event publishers, message-broker configuration, and outbox patterns.
- * Domain events are defined in bounded-context {@code domain.event} packages and referenced here.
+ * JPA / Spring Data infrastructure configuration (datasource, transaction manager, Liquibase/Flyway setup).
+ * Bounded-context-specific repository implementations belong in their own {@code adapter.out.persistence} packages.
  */
-package com.iqscaffold.servicename.infrastructure.messaging;
+package com.iqkv.servicename.infrastructure.persistence;

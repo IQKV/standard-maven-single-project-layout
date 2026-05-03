@@ -15,8 +15,7 @@
  */
 
 /**
- * Spring {@code @Configuration} classes and application-wide bean definitions.
- * This is the top-level technical concern; it may reference all other packages but must not
- * contain any business logic.
+ * Spring Security filter chains, JWT filters, and security utility classes.
+ * Must not depend on bounded-context adapter or application packages.
  */
-package com.iqscaffold.servicename.infrastructure.config;
+package com.iqkv.servicename.infrastructure.security;
