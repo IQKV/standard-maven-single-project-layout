@@ -861,15 +861,15 @@ A task is evaluated as done only when all of the following hold:
 
 ### Required gates by change type
 
-| Change type | Required gates |
-| --- | --- |
-| Any change | `mvn -q compile`, then the narrowest targeted `mvn test -Dtest=ClassName` |
-| Domain / application / service logic | Unit tests (JUnit 5 + Mockito, AAA); a new non-trivial branch, loop or parser needs a test |
-| REST controller, Spring Security, `@PreAuthorize` | Security test, then full `mvn clean verify` |
-| Liquibase changelog | Full `mvn clean verify` — the Spring context and schema must load cleanly |
-| Package/layer move, new module | ArchUnit `*ArchitectureTest`, then full `mvn clean verify` |
-| Dependency or build config | Full `mvn clean verify` |
-| Docs, README or `AGENTS.md` only | `pnpm formatter:check`; no code gate — state that none applies |
+| Change type                                       | Required gates                                                                             |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| Any change                                        | `mvn -q compile`, then the narrowest targeted `mvn test -Dtest=ClassName`                  |
+| Domain / application / service logic              | Unit tests (JUnit 5 + Mockito, AAA); a new non-trivial branch, loop or parser needs a test |
+| REST controller, Spring Security, `@PreAuthorize` | Security test, then full `mvn clean verify`                                                |
+| Liquibase changelog                               | Full `mvn clean verify` — the Spring context and schema must load cleanly                  |
+| Package/layer move, new module                    | ArchUnit `*ArchitectureTest`, then full `mvn clean verify`                                 |
+| Dependency or build config                        | Full `mvn clean verify`                                                                    |
+| Docs, README or `AGENTS.md` only                  | `pnpm formatter:check`; no code gate — state that none applies                             |
 
 ### Ordering
 
